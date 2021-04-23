@@ -10,7 +10,7 @@ class Trucks(Cars):
     def In(self, line):
         self.weight = line[1]
         self.engine_power = line[2]
-
+        self.fuel_consumption = line[3]
 
     def display(self, file, i):
         file.write(str(i) + '.Грузовик' + "\n")
