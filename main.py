@@ -7,6 +7,7 @@ def main():
     file = open(input_name)
     container.in_data(file)
     file.close()
+    container.sort()
     file = open(output_name, "w")
     container.out(file)
     container.clear()

@@ -23,6 +23,13 @@ class Container:
             file.write('Мощность двигателя: ' + str(self.cars[i].engine_power) + "\n")
             file.write('Отношение веса груза к мощности двигателя : ' + str(self.cars[i].ratio) + "\n")
 
+    def sort(self):
+        for i in range(len(self.cars)-1):
+            for j in range(len(self.cars)-1):
+                if self.cars[j].ratio > self.cars[j+1].ratio:
+                    self.cars[j], self.cars[j+1] = self.cars[j+1], self.cars[j]
+
+
     def clear(self):
         self.cars.clear()
 
