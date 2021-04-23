@@ -10,6 +10,8 @@ class Trucks(Cars):
     def In(self, line):
         self.weight = line[1]
         self.engine_power = line[2]
+        self.global_weight = line[1]
+        self.ratio_calc()
 
 
     def display(self, file, i):

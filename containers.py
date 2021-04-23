@@ -20,8 +20,8 @@ class Container:
         file.write('Контейнер содержит ' + str(len(self.cars))+' элементов \n')
         for i in range(len(self.cars)):
             self.cars[i].display(file, i)
-            file.write('мощность двигателя: ' + str(self.cars[i].engine_power) + "\n")
-        print('всё')
+            file.write('Мощность двигателя: ' + str(self.cars[i].engine_power) + "\n")
+            file.write('Отношение веса груза к мощности двигателя : ' + str(self.cars[i].ratio) + "\n")
 
     def clear(self):
         self.cars.clear()
