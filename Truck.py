@@ -16,6 +16,8 @@ class Trucks(Cars):
         file.write(str(i) + '.Грузовик' + "\n")
         file.write('грузоподъёмность: ' + str(self.weight) + "\n")
 
-
+    def display_filtr(self, file, i):
+        file.write(str(i) + '.Грузовик' + "\n")
+        file.write('грузоподъёмность: ' + str(self.weight) + "\n")
 
 
