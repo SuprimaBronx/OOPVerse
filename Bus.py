@@ -17,5 +17,8 @@ class Buses(Cars):
         file.write(str(i) +'.Автобус' + "\n")
         file.write('пассажировместимость: ' + str( self.passenger) + "\n")
 
+    def display_filtr(self, file_name, i):
+        return None
+
 
 
