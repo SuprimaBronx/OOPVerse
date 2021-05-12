@@ -19,5 +19,7 @@ class Trucks(Cars):
     def display_filtr(self, file, i):
         file.write(str(i) + '.Грузовик' + "\n")
         file.write('грузоподъёмность: ' + str(self.weight) + "\n")
+        file.write('мощность двигателя: ' + str(self.engine_power) + "\n")
+        file.write('расход топлива: ' + str(self.fuel_consumption) + "\n")
 
 
