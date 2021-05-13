@@ -22,13 +22,12 @@ class Container:
             self.cars[i].display(file, i)
             file.write('мощность двигателя: ' + str(self.cars[i].engine_power) + "\n")
             file.write('расход топлива: ' + str(self.cars[i].fuel_consumption) + "\n")
-
+            file.write('Отношение веса груза к мощности двигателя : ' + str(self.cars[i].ratio) + "\n")
 
     def out_filtr(self, file_name):
         file_name.write('Контейнер содержит ' + str(len(self.cars)) + ' элементов \n')
         for i in range(len(self.cars)):
             self.cars[i].display_filtr(file_name, i)
-
 
     def clear(self):
         self.cars.clear()
