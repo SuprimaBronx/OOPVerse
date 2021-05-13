@@ -29,6 +29,12 @@ class Container:
         for i in range(len(self.cars)):
             self.cars[i].display_filtr(file_name, i)
 
+    def sort(self):
+        for i in range(len(self.cars)-1):
+            for j in range(len(self.cars)-1):
+                if self.cars[j].ratio > self.cars[j+1].ratio:
+                    self.cars[j], self.cars[j+1] = self.cars[j+1], self.cars[j]
+
     def clear(self):
         self.cars.clear()
 
