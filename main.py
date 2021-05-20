@@ -25,12 +25,15 @@ def main():
         container.clear()
         container.out(file,x)
         container.out_filtr(file1,x)
-    if x != 'x':
+        file.close()
+        file1.close()
+    else:
         file = open(output_name, "w")
         file1 = open(output_filtr_name, "w")
         container.out(file, x)
         container.out_filtr(file1, x)
-    file.close()
-    file1.close()
+        file.close()
+        file1.close()
+
 if __name__ == '__main__':
     main()
