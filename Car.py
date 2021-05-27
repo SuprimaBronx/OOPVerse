@@ -8,6 +8,3 @@ class Cars:
 
     def ratio_calc(self):
         self.ratio = self.global_weight / self.engine_power
-
-
-

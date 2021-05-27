@@ -1,7 +1,8 @@
 from Car import Cars
 from Bus import Buses
-from Light_car import Light_car
+from LightCar import LightCar
 from Truck import Trucks
+
 
 def in_data(line):
     cd = Cars()
@@ -10,6 +11,8 @@ def in_data(line):
     elif line[0] == 1:
         cd = Buses()
     elif line[0] == 2:
-        cd = Light_car()
-    cd.In(line)
+        cd = LightCar()
+
+    cd.in_information(line)
+
     return cd

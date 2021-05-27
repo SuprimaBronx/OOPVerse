@@ -1,13 +1,14 @@
 from Car import Cars
 
-class Light_car(Cars):
+
+class LightCar(Cars):
 
     def __init__(self):
         super().__init__()
         self.type = 'light_car'
         self.max_speed = 0
 
-    def In(self, line):
+    def in_information(self, line):
         self.max_speed = line[1]
         self.engine_power = line[2]
         self.fuel_consumption = line[3]

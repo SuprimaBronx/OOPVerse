@@ -1,4 +1,5 @@
-from containers import Container
+from Containers import Container
+
 
 def main():
     x = 0
@@ -8,9 +9,9 @@ def main():
     output_filtr_name = str(input())
     try:
         file = open(input_name)
-    except:
+    except():
         x = 4
-    if x!=4:
+    if x != 4:
         x = container.check(file)
         file.close()
     if x == 'x':
@@ -20,11 +21,11 @@ def main():
         container.sort()
         file = open(output_name, "w")
         file1 = open(output_filtr_name, "w")
-        container.out(file,x)
-        container.out_filtr(file1,x)
+        container.out(file, x)
+        container.out_filtr(file1, x)
         container.clear()
-        container.out(file,x)
-        container.out_filtr(file1,x)
+        container.out(file, x)
+        container.out_filtr(file1, x)
         file.close()
         file1.close()
     else:
@@ -34,6 +35,7 @@ def main():
         container.out_filtr(file1, x)
         file.close()
         file1.close()
+
 
 if __name__ == '__main__':
     main()

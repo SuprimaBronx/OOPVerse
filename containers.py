@@ -15,13 +15,12 @@ class Container:
             cd = in_data(temp)
             self.cars.append(cd)
 
-
-    def out(self, file,x):
+    def out(self, file, x):
         if x == 0:
             file.write('в вводимых данных содержится ошибка, неизвестный символ')
         elif x == 1:
             file.write('в вводимых данных содержится ошибка, выбран несуществующий класс автомобилей')
-        elif x ==2:
+        elif x == 2:
             file.write('в вводимых данных содержится ошибка, параметры автомобилей не могут быть отирцательными')
         elif x == 4:
             file.write('неверно введённое имя входного файла')
@@ -33,7 +32,7 @@ class Container:
                 file.write('расход топлива: ' + str(self.cars[i].fuel_consumption) + "\n")
                 file.write('Отношение веса груза к мощности двигателя : ' + str(self.cars[i].ratio) + "\n")
 
-    def out_filtr(self, file_name,x):
+    def out_filtr(self, file_name, x):
         if x == 0:
             file_name.write('в вводимых данных содержится ошибка, неизвестный символ')
         elif x == 1:
@@ -56,7 +55,7 @@ class Container:
     def clear(self):
         self.cars.clear()
 
-    def check(self,file):
+    def check(self, file):
         for line in file:
             temp = (line + '.')[:-1]
             for i in range(len(temp)):
