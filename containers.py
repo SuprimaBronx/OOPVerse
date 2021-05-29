@@ -23,6 +23,13 @@ class Container:
             file.write('мощность двигателя: ' + str(self.cars[i].engine_power) + "\n")
         print('всё')
 
+    def multimethods(self, file_name):
+        try:
+            for i in range(0, len(self.cars), 2):
+                file_name.write(self.cars[i].type_check() + ' and ' + self.cars[i + 1].type_check() + '\n')
+        except:
+            file_name.write(self.cars[-1].type_check()+ ' alone' + '\n')
+
     def clear(self):
         self.cars.clear()
 

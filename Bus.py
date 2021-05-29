@@ -16,5 +16,8 @@ class Buses(Cars):
         file.write(str(i) +'.Автобус' + "\n")
         file.write('пассажировместимость: ' + str( self.passenger) + "\n")
 
+    def type_check(self):
+        return self.type
+
 
 
