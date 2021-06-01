@@ -27,8 +27,14 @@ class Container:
         try:
             for i in range(0, len(self.cars), 2):
                 file_name.write(self.cars[i].type_check() + ' and ' + self.cars[i + 1].type_check() + '\n')
+                self.cars[i].display(file_name, i)
+                file_name.write('мощность двигателя: ' + str(self.cars[i].engine_power) + "\n")
+                self.cars[i + 1].display(file_name, i + 1)
+                file_name.write('мощность двигателя: ' + str(self.cars[i + 1].engine_power) + "\n")
         except:
             file_name.write(self.cars[-1].type_check()+ ' alone' + '\n')
+            self.cars[-1].display(file_name, len(self.cars) - 1)
+            file_name.write('мощность двигателя: ' + str(self.cars[-1].engine_power) + "\n")
 
     def clear(self):
         self.cars.clear()
