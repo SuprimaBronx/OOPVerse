@@ -70,3 +70,20 @@ class Container:
             if temp[1] <= 0 or temp[2] <= 0 or temp[3] <= 0:
                 return 2
         return 'x'
+
+    def multimethods(self, file_name):
+        try:
+            for i in range(0, len(self.cars), 2):
+                file_name.write(self.cars[i].type_check() + ' and ' + self.cars[i + 1].type_check() + '\n')
+                self.cars[i].display(file_name, i)
+                file_name.write('мощность двигателя: ' + str(self.cars[i].engine_power) + "\n")
+                file_name.write('расход топлива: ' + str(self.cars[i].fuel_consumption) + "\n")
+                file_name.write('Отношение веса груза к мощности двигателя : ' + str(self.cars[i].ratio) + "\n")
+                self.cars[i + 1].display(file_name, i + 1)
+                file_name.write('мощность двигателя: ' + str(self.cars[i + 1].engine_power) + "\n")
+        except:
+            file_name.write(self.cars[-1].type_check() + ' alone' + '\n')
+            self.cars[-1].display(file_name, len(self.cars) - 1)
+            file_name.write('мощность двигателя: ' + str(self.cars[-1].engine_power) + "\n")
+            file_name.write('расход топлива: ' + str(self.cars[-1].fuel_consumption) + "\n")
+            file_name.write('Отношение веса груза к мощности двигателя : ' + str(self.cars[-1].ratio) + "\n")

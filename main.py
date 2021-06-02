@@ -7,6 +7,7 @@ def main():
     input_name = str(input())
     output_name = str(input())
     output_filtr_name = str(input())
+
     try:
         file = open(input_name)
     except():
@@ -18,6 +19,9 @@ def main():
         file = open(input_name)
         container.in_data(file)
         file.close()
+        multi = open('out.txt', 'w')
+        container.multimethods(multi)
+        multi.close()
         container.sort()
         file = open(output_name, "w")
         file1 = open(output_filtr_name, "w")

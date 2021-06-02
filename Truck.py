@@ -25,3 +25,6 @@ class Trucks(Cars):
         file.write('мощность двигателя: ' + str(self.engine_power) + "\n")
         file.write('расход топлива: ' + str(self.fuel_consumption) + "\n")
         file.write('отношение веса груза к мощности двигателя: ' + str(self.ratio) + "\n")
+
+    def type_check(self):
+        return self.type

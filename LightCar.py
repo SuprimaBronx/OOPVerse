@@ -21,3 +21,6 @@ class LightCar(Cars):
 
     def display_filtr(self, file_name, i):
         return None
+
+    def type_check(self):
+        return self.type
